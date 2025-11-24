@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Lanza Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <div class="profile">
+            <div class="avatar">L</div>
+            <div>
+                <div class="name">Lanza</div>
+                <div class="status">online</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIRST MESSAGE FROM LANZA -->
+    <div id="chat-body" class="chat-body">
+        <div class="message bot-msg">
+            Hi, I’m Lanza! I’m here to transform your sentences into polished professional messages, heartfelt romantic texts, or smooth and stylish replies. Just type your message and watch the magic happen.
+        </div>
+    </div>
+
+
+    <div class="chat-input">
+        <input id="user-input" type="text" placeholder="Type a message..." />
+        <button onclick="sendMessage()">▶</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+/* General Reset and Font */
+body {
+    margin: 0;
+    height: 100vh;
+    /* Light Theme Background: Clean off-white/very light grey */
+    background: #f0f2f5; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for Centered Content */
+.container {
+    text-align: center;
+    /* Primary text color is dark on a light background */
+    color: #111b21; 
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Main Title Style */
+.title {
+    font-size: 64px;
+    font-weight: 800; /* Extra bold for prominence */
+    /* Primary Accent Color: Deep, modern blue */
+    color: #007bff; 
+    text-shadow: none; /* Remove glowing effect for a professional look */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Subtitle/Description */
+.subtitle {
+    font-size: 19px;
+    /* Secondary text color: Soft dark grey for readability */
+    color: #495057; 
+    margin-bottom: 50px; /* Increased space below subtitle */
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Get Started Button - Highlighted and Professional */
+.start-btn {
+    display: inline-block;
+    padding: 16px 40px; /* Larger padding for better touch targets */
+    font-size: 20px;
+    /* Primary Accent Color for the button */
+    background: #007bff; 
+    color: white; /* White text on blue button */
+    border-radius: 8px; /* Slightly squared corners for a modern feel */
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease-out;
+    /* Professional lift effect */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    border: 2px solid transparent; /* Prepare for hover state */
+}
+
+.start-btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+    /* Add a deeper shadow or subtle lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+}
