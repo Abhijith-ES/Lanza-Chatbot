@@ -5,7 +5,11 @@ import os
 
 app = Flask(__name__)
 
-load_dotenv()
+# Load .env variables ONLY if the code is running locally (i.e., not via Gunicorn/production server)
+# Gunicorn/Render handles the environment variables directly.
+if __name__ == "__main__":
+    load_dotenv()
+    
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 system_prompt = """
@@ -57,8 +61,7 @@ def transform():
     return jsonify({"transformed": result})
 
 if __name__ == "__main__":
+    # Load environment variables before running locally
+    # This block is ignored by Gunicorn in production
     app.run(debug=True)
 
-
-
- 
