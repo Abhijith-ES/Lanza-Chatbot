@@ -63,3 +63,9 @@ body {
     box-shadow: 0 6px 16px rgba(0, 123, 255, 0.5);
     transform: translateY(-2px);
 }
+footer {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    /* If your footer has a set height and you want vertical centering as well, add: */
+    align-items: center;
+}
