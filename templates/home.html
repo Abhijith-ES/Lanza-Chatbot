@@ -2,25 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lanza AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANZA - AI Message Transformer</title>
+    <!-- Combined CSS in a single style block for deployment -->
+    <style>
+        /* New body style for Sticky Footer Layout */
+        body {
+            margin: 0;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            background: #f0f2f5; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex; /* Activate Flexbox */
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        /* Wrapper to push the footer down */
+        .main-content-wrapper {
+            flex: 1; /* This element takes all remaining vertical space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; 
+            width: 100%;
+        }
+
+        /* Container for Centered Content */
+        .container {
+            text-align: center;
+            color: #111b21; 
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        /* Main Title Style */
+        .title {
+            font-size: 64px;
+            font-weight: 800;
+            color: #007bff; 
+            text-shadow: none;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Subtitle/Description */
+        .subtitle {
+            font-size: 19px;
+            color: #495057; 
+            margin-bottom: 50px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Get Started Button */
+        .start-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 20px;
+            background: #007bff; 
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s ease-out;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+            border: 2px solid transparent;
+        }
+
+        .start-btn:hover {
+            background: #0056b3;
+            box-shadow: 0 6px 16px rgba(0, 123, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            padding: 15px 0;
+            background: #e9ecef; /* Light background for visibility */
+            border-top: 1px solid #dcdcdc;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<!-- Main Content Wrapper: Takes up all vertical space, pushing the footer down -->
+<main class="main-content-wrapper">
+    <div class="container">
 
-    <h1 class="title">LANZA</h1>
+        <h1 class="title">LANZA</h1>
 
-    <p class="subtitle">
-        Your personal message transformer.  
-        Rewrite anything into the perfect professional, romantic or smooth reply.
-    </p>
+        <p class="subtitle">
+            Your personal message transformer.  
+            Rewrite anything into the perfect professional, romantic or smooth reply.
+        </p>
 
-    <a href="{{ url_for('chat') }}" class="start-btn">Get Started</a>
+        <!-- Using the /chat route directly, as Flask's url_for is not available in static HTML -->
+        <a href="/chat" class="start-btn">Get Started</a>
 
-</div>
+    </div>
+</main>
+
+<!-- Footer: Renders at the bottom of the viewport -->
 <footer>
-    <p><centre>© 2025 LANZA AI | E S Abhijith</centre></p>
+    <p>&copy; 2025 LANZA AI | E S Abhijith</p>
 </footer>
+
 </body>
 </html>
