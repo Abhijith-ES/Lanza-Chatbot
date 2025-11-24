@@ -208,6 +208,11 @@ body {
 .copy-btn:hover {
     opacity: 1;
 }
-
+footer {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    /* If your footer has a set height and you want vertical centering as well, add: */
+    align-items: center;
+}
 
 
